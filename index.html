@@ -11,9 +11,11 @@
 
   <header class="page-header" id="header">
     <div class="container">
+
       <div class="logo">
         <img src="img/pion-logo.svg" alt="" class="logo__img">
       </div>
+
       <nav class="main-nav">
         <li class="main-nav__item sub-menu">
           <a href="" class="main-nav__link">Каталог</a>
@@ -33,6 +35,7 @@
         <li class="main-nav__item"><a href="" class="main-nav__link">Блог</a></li>
         <li class="main-nav__item"><a href="" class="main-nav__link">Где купить</a></li>
       </nav>
+
       <div class="page-header__contacts">
         <div class="page-header__phone">
           <a href="telto:88129122513" class="page-header__phone-number">8 (812) 912-25-13</a>
@@ -42,7 +45,36 @@
           <a href="" class="page-header__social-link  page-header__social-link--inst"><img src="img/instagram-symbol.svg" alt=""></a>
         </div>
       </div>
-      <div class="mobile-menu"><span></span></div>
+
+
+      <div id="main-nav" class="mobile-nav">
+        <li class="mobile-nav__item"><span class="mobile-nav__link  mobile-nav__link--title">Меню</span></li>
+        <li class="mobile-nav__item"><a href="" id="collection-nav-link" class="mobile-nav__link  mobile-sub-menu">Коллекции</a></li>
+        <li class="mobile-nav__item"><span id="studio-nav-link" class="mobile-nav__link  mobile-sub-menu">Мастерская</span></li>
+        <li class="mobile-nav__item"><a href="" class="mobile-nav__link">Блог</a></li>
+        <li class="mobile-nav__item"><a href="" class="mobile-nav__link">Где купить</a></li>
+
+        <div id="collection-nav" class="mobile-nav">
+          <li class="mobile-nav__item"><span class="mobile-nav__link  mobile-nav__back-link  mobile-nav__link--title">Коллекции</span></li>
+          <li class="mobile-nav__item"><a href="" class="mobile-nav__link">Сон в летнюю ночь</a></li>
+          <li class="mobile-nav__item"><a href="" class="mobile-nav__link">Дыхание ветра</a></li>
+          <li class="mobile-nav__item"><a href="" class="mobile-nav__link">OHSOWHITE!</a></li>
+          <li class="mobile-nav__item"><a href="" class="mobile-nav__link">В облаках</a></li>
+          <li class="mobile-nav__item"><a href="" class="mobile-nav__link">Будуарные платья</a></li>
+        </div>
+
+        <div id="studio-nav" class="mobile-nav">
+          <li class="mobile-nav__item"><span class="mobile-nav__link  mobile-nav__back-link  mobile-nav__link--title">Мастерская</span></li>
+          <li class="mobile-nav__item"><a href="" class="mobile-nav__link">О нас</a></li>
+          <li class="mobile-nav__item"><a href="" class="mobile-nav__link">Наши невесты</a></li>
+          <li class="mobile-nav__item"><a href="" class="mobile-nav__link">Частые вопросы</a></li>
+        </div>
+
+      </div>
+
+
+
+      <div id="toggler" class="mobile-menu"><span></span></div>
     </div>
   </header>
 
