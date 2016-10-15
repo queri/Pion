@@ -5,10 +5,11 @@
   <title>Pion</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/jquery.fullpage.css">
 </head>
 <body>
 
-  <header class="page-header">
+  <header class="page-header" id="header">
     <div class="container">
       <div class="logo">
         <img src="img/pion-logo.svg" alt="" class="logo__img">
@@ -43,10 +44,10 @@
       </div>
       <div class="mobile-menu"><span></span></div>
     </div>
-
   </header>
 
-  <section class="promo">
+<div class="fullpage-wrapper" id="fullpage">
+  <section class="section fp-auto-height  promo">
     <div class="container">
       <div class="promo__dscr">
         <h1 class="main-title  promo__title">
@@ -59,21 +60,20 @@
         <img src="img/main-slide-1.jpg" alt="">
       </div>
     </div>
-    <div class="pagination">
-      <a href="" class="pagination__link"></a>
-      <a href="" class="pagination__link"></a>
-      <a href="" class="pagination__link"></a>
-      <a href="" class="pagination__link"></a>
-    </div>
-    <div class="scrolling">
-      <div class="scrolling__icon">
-        <object class="scrolling__icon-img" type="image/svg+xml" data="img/MOUSE.svg" width="22" height="32">
-        </object>
-      </div>
+    <ul class="pagination" id="menu">
+      <li data-menuanchor="firstPage" class="active"><a href="#firstPage" class="pagination__link"></a></li>
+      <li data-menuanchor="secondPage"><a href="#secondPage" class="pagination__link"></a></li>
+      <li data-menuanchor="thirdPage"><a href="#thirdPage" class="pagination__link"></a></li>
+      <li data-menuanchor="fourthPage"><a href="#fourthPage" class="pagination__link"></a></li>
+    </ul>
+    <div class="scrolling" >
+      <a href="#" class="scrolling__icon" id="moveSectionDown">
+        <img src="img/MOUSE.svg" alt="">
+      </a>
     </div>
   </section>
 
-  <section class="collection">
+  <section class="section  fp-auto-height  collection">
     <div class="container">
       <div class="collection__dscr">
         <h1 class="main-title"><span>Наши коллекции</span></h1>
@@ -97,21 +97,14 @@
         </div>
       </div>
     </div>
-    <div class="pagination">
-      <a href="" class="pagination__link"></a>
-      <a href="" class="pagination__link"></a>
-      <a href="" class="pagination__link"></a>
-      <a href="" class="pagination__link"></a>
-    </div>
-    <div class="scrolling">
-      <div class="scrolling__icon">
-        <object class="scrolling__icon-img" type="image/svg+xml" data="img/MOUSE.svg" width="22" height="32">
-        </object>
-      </div>
+    <div class="scrolling" >
+      <a href="#" class="scrolling__icon" id="moveSectionDown">
+        <img src="img/MOUSE.svg" alt="">
+      </a>
     </div>
   </section>
 
-  <section class="about">
+  <section class="section  fp-auto-height  about">
     <div class="container">
       <div class="about__dscr">
         <h1 class="main-title  about__title"><span>Почему мы</span></h1>
@@ -133,22 +126,14 @@
         </div>
       </div>
     </div>
-    <div class="pagination">
-      <a href="" class="pagination__link"></a>
-      <a href="" class="pagination__link"></a>
-      <a href="" class="pagination__link"></a>
-      <a href="" class="pagination__link"></a>
+    <div class="scrolling" >
+      <a href="#" class="scrolling__icon" id="moveSectionDown">
+        <img src="img/MOUSE.svg" alt="">
+      </a>
     </div>
-    <div class="scrolling">
-      <div class="scrolling__icon">
-        <object class="scrolling__icon-img" type="image/svg+xml" data="img/MOUSE.svg" width="22" height="32">
-        </object>
-      </div>
-    </div>
-
   </section>
 
-  <section class="contacts">
+  <section class="section  fp-auto-height  contacts">
     <div class="container">
       <div class="contacts__dscr">
         <h1 class="main-title  contacts__title"><span>Контакты</span></h1>
@@ -180,14 +165,12 @@
       </div>
       <div class="contacts__map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1997.3748098823512!2d30.31158331580511!3d59.959105981883674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963143b840d7f1%3A0x3d7a1821e46a39ef!2z0YPQuy4g0JzQuNGA0LAsIDMsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTcxMDE!5e0!3m2!1sru!2sru!4v1476334049035" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe></div>
     </div>
-    <div class="pagination">
-      <a href="" class="pagination__link"></a>
-      <a href="" class="pagination__link"></a>
-      <a href="" class="pagination__link"></a>
-      <a href="" class="pagination__link"></a>
-    </div>
   </section>
+</div>
 
 <script src="js/live.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.fullpage.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
