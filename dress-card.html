@@ -11,13 +11,13 @@
   <header class="page-header" id="header">
     <div class="container">
 
-      <div class="logo">
+      <a href="index.html" class="logo">
         <img src="img/pion-logo.svg" alt="" class="logo__img">
-      </div>
+      </a>
 
       <nav class="main-nav">
         <li class="main-nav__item sub-menu">
-          <a href="catalog.html" class="main-nav__link">Каталог</a>
+          <a href="catalog.html" class="main-nav__link  main-nav__link--active">Каталог</a>
           <ul class="sub-menu__drop-down">
             <li class="sub-menu__item"><a href="collection.html" class="sub-menu__link">«В облаках»</a></li>
             <li class="sub-menu__item"><a href="collection.html" class="sub-menu__link">«OhMyWhite»</a></li>
@@ -27,12 +27,12 @@
           <span class="main-nav__link">Мастерская</span>
           <ul class="sub-menu__drop-down">
             <li class="sub-menu__item"><a href="about.html" class="sub-menu__link">О нас</a></li>
-            <li class="sub-menu__item"><a href="" class="sub-menu__link">Наши невесты</a></li>
-            <li class="sub-menu__item"><a href="" class="sub-menu__link">Частые вопросы</a></li>
+            <li class="sub-menu__item"><a href="brides.html" class="sub-menu__link">Наши невесты</a></li>
+            <li class="sub-menu__item"><a href="faq.html" class="sub-menu__link">Частые вопросы</a></li>
           </ul>
         </li>
-        <li class="main-nav__item"><a href="" class="main-nav__link">Блог</a></li>
-        <li class="main-nav__item"><a href="" class="main-nav__link">Где купить</a></li>
+        <li class="main-nav__item"><a href="blog.html" class="main-nav__link">Блог</a></li>
+        <li class="main-nav__item"><a href="contacts.html" class="main-nav__link">Где купить</a></li>
       </nav>
 
       <div class="page-header__contacts">
@@ -40,8 +40,8 @@
           <a href="telto:88129122513" class="page-header__phone-number">8 (812) 912-25-13</a>
         </div>
         <div class="page-header__social">
-          <a href="" class="page-header__social-link  page-header__social-link--vk"><img src="img/vk-social-network-logo.svg" alt=""></a>
-          <a href="" class="page-header__social-link  page-header__social-link--inst"><img src="img/instagram-symbol.svg" alt=""></a>
+          <a href="http://vk.com" class="page-header__social-link  page-header__social-link--vk"><img src="img/vk-social-network-logo.svg" alt=""></a>
+          <a href="http://instagram.com" class="page-header__social-link  page-header__social-link--inst"><img src="img/instagram-symbol.svg" alt=""></a>
         </div>
       </div>
 
@@ -50,8 +50,8 @@
         <li class="mobile-nav__item"><span class="mobile-nav__link  mobile-nav__link--title">Меню</span></li>
         <li class="mobile-nav__item"><span id="collection-nav-link" class="mobile-nav__link  mobile-sub-menu">Коллекции</span></li>
         <li class="mobile-nav__item"><span id="studio-nav-link" class="mobile-nav__link  mobile-sub-menu">Мастерская</span></li>
-        <li class="mobile-nav__item"><a href="" class="mobile-nav__link">Блог</a></li>
-        <li class="mobile-nav__item"><a href="" class="mobile-nav__link">Где купить</a></li>
+        <li class="mobile-nav__item"><a href="blog.html" class="mobile-nav__link">Блог</a></li>
+        <li class="mobile-nav__item"><a href="contacts.html" class="mobile-nav__link">Где купить</a></li>
 
         <div id="collection-nav" class="mobile-nav">
           <li class="mobile-nav__item"><span class="mobile-nav__link  mobile-nav__back-link  mobile-nav__link--title">Коллекции</span></li>
@@ -65,8 +65,8 @@
         <div id="studio-nav" class="mobile-nav">
           <li class="mobile-nav__item"><span class="mobile-nav__link  mobile-nav__back-link  mobile-nav__link--title">Мастерская</span></li>
           <li class="mobile-nav__item"><a href="about.html" class="mobile-nav__link">О нас</a></li>
-          <li class="mobile-nav__item"><a href="" class="mobile-nav__link">Наши невесты</a></li>
-          <li class="mobile-nav__item"><a href="" class="mobile-nav__link">Частые вопросы</a></li>
+          <li class="mobile-nav__item"><a href="brides.html" class="mobile-nav__link">Наши невесты</a></li>
+          <li class="mobile-nav__item"><a href="faq.html" class="mobile-nav__link">Частые вопросы</a></li>
         </div>
 
       </div>
@@ -99,7 +99,7 @@
         <span class="dress-card__collection">Коллекция "В облаках"</span>
         <span class="dress-card__color">Цвет: мятный</span>
         <span class="dress-card__price">25 000.00 <span class="dress-card__currency">руб.</span></span>
-        <a href="#" class="btn">Записаться на примерку</a>
+        <a href="#" class="btn" id="open_popup" rel="popup">Записаться на примерку</a>
         <div class="nav-link__wrapper">
           <a href="#" class="nav-link nav-link--prev">Предыдущее платье</a>
           <a href="#" class="nav-link nav-link--next">Следующее платье</a>
@@ -108,6 +108,24 @@
 
     </div>
   </section>
+
+
+  <div class="overlay"></div>
+  <div class="popup" id="popup">
+    <form action="" class="contacts-form">
+      <h2 class="contacts-form__title">Запись на примерку</h2>
+      <input class="input-field" type="text" name="name" id="" placeholder="Имя">
+      <input class="input-field" type="text" name="phone" id="" placeholder="Телефон">
+      <input class="input-field" type="text" name="email" id="" placeholder="E-mail">
+      <button class="btn" type="submit" id="submit">Записаться на примерку</button>
+    </form>
+    <div class="success-message">
+      <h2 class="success-message__title">Вы записаны на примерку</h2>
+      <div class="success-message__text">
+        <p>Наш менеджер свяжется с Вами в ближайшее время, чтобы уточнить детали. Спасибо!</p>
+      </div>
+    </div>
+  </div>
 
 
   <script src="js/live.js"></script>

@@ -17,7 +17,7 @@
 
       <nav class="main-nav">
         <li class="main-nav__item sub-menu">
-          <a href="catalog.html  main-nav__link--active" class="main-nav__link">Каталог</a>
+          <a href="catalog.html" class="main-nav__link">Каталог</a>
           <ul class="sub-menu__drop-down">
             <li class="sub-menu__item"><a href="collection.html" class="sub-menu__link">«В облаках»</a></li>
             <li class="sub-menu__item"><a href="collection.html" class="sub-menu__link">«OhMyWhite»</a></li>
@@ -32,7 +32,7 @@
           </ul>
         </li>
         <li class="main-nav__item"><a href="blog.html" class="main-nav__link">Блог</a></li>
-        <li class="main-nav__item"><a href="contacts.html" class="main-nav__link">Где купить</a></li>
+        <li class="main-nav__item  main-nav__link--active"><a href="contacts.html" class="main-nav__link">Где купить</a></li>
       </nav>
 
       <div class="page-header__contacts">
@@ -75,52 +75,76 @@
     </div>
   </header>
 
-  <section class="catalog-promo">
-    <h1 class="main-title"><span>Каталог коллекций</span></h1>
-    <p>Платья свадебной мастерской Пион призваны подчеркнуть очарование и индивидуальность каждой невесты. Нежные и воздушные, они являются олицетворением красоты и легкости, воплощенной в облаках фатиновых юбок и витиеватых узорах тончайших кружев.</p>
-  </section>
-
-  <div class="back-link">
-    <a href="index.html" class="back-link__btn">К главной</a>
+  <div class="back-link  back-link--about">
+    <a href="index.html" class="back-link__btn">Главная</a>
   </div>
 
-    <div class="container">
-  <div class="catalog-item">
-
-      <a href="collection.html" class="catalog-item__photo">
-        <img src="img/catalog-preview1.jpg" alt="">
-      </a>
-      <div class="catalog-item__dscr">
-        <h2 class="catalog-item__title">«В облаках»</h2>
-        <p>Свадебная мастерская Пион поможет каждой невесте создать свой незабываемый образ. Платья Свадебной Мастерской Пион нежные и воздушные,они призваны подчеркнуть очарование и индивидуальность каждой невесты.</p>
-        <a href="collection.html" class="btn">Смотреть коллекцию</a>
-      </div>
-    </div>
-  </div>
-
-<div class="container">
-  <div class="catalog-item  catalog-item--reverse">
-
-      <a href="collection.html" class="catalog-item__photo">
-        <img src="img/catalog-preview2.jpg" alt="">
-      </a>
-      <div class="catalog-item__dscr">
-        <h2 class="catalog-item__title">«OhMyWhite!»</h2>
-        <p>Свадебная мастерская Пион поможет каждой невесте создать свой незабываемый образ. Платья Свадебной Мастерской Пион нежные и воздушные,они призваны подчеркнуть очарование и индивидуальность каждой невесты.</p>
-        <a href="collection.html" class="btn">Смотреть коллекцию</a>
-      </div>
-    </div>
-  </div>
   <div class="container">
-  <div class="catalog-item">
+    <section class="contacts-promo">
+      <h1 class="main-title"><span>Где купить</span></h1>
+      <p>Вы можете купить платья непосредственно в нашей мастерской, которая находится в самом сердце Санкт-Петербурга. Кроме того, наши платья можно найти и в других городах России.</p>
+    </section>
 
-      <a href="collection.html" class="catalog-item__photo">
-        <img src="img/catalog-preview3.jpg" alt="">
-      </a>
-      <div class="catalog-item__dscr">
-        <h2 class="catalog-item__title">«My Dream»</h2>
-        <p>Свадебная мастерская Пион поможет каждой невесте создать свой незабываемый образ. Платья Свадебной Мастерской Пион нежные и воздушные,они призваны подчеркнуть очарование и индивидуальность каждой невесты.</p>
-        <a href="collection.html" class="btn">Смотреть коллекцию</a>
+    <div class="contacts-wrapper">
+
+      <div class="contacts-block">
+        <div class="contacts-block__information">
+          <div class="contacts__address">
+            <h2 class="contacts__title">Санкт-Петербург</h2>
+            <span class="contacts__subtitle">Адрес:</span>
+            <span class="contacts__text">ул. Мира, д.3, офис 602 (БЦ Троицкий)</span>
+          </div>
+          <div class="contacts__phone">
+            <span class="contacts__subtitle">Телефон:</span>
+            <a href="telto:88129122513" class="contacts__phone-link">+7 (812) 912-25-13</a>
+          </div>
+          <div class="contacts__schedule">
+            <span class="contacts__subtitle">График работы:</span>
+            <span class="contacts__text">с 11-00 до 21-00</span>
+          </div>
+          <a href="#" class="btn" id="open_popup" rel="popup">Записаться на примерку</a>
+        </div>
+        <div class="contacts-block__map" id="map-spb"></div>
+      </div>
+
+      <div class="contacts-block  contacts-block--reverse">
+        <div class="contacts-block__information">
+          <div class="contacts__address">
+            <h2 class="contacts__title">Томск</h2>
+            <span class="contacts__subtitle">Адрес:</span>
+            <span class="contacts__text">ул. Мира, д.3, офис 602 (БЦ Троицкий)</span>
+          </div>
+          <div class="contacts__phone">
+            <span class="contacts__subtitle">Телефон:</span>
+            <a href="telto:88129122513" class="contacts__phone-link">+7 (812) 912-25-13</a>
+          </div>
+          <div class="contacts__schedule">
+            <span class="contacts__subtitle">График работы:</span>
+            <span class="contacts__text">с 11-00 до 21-00</span>
+          </div>
+          <a href="#" class="btn" id="open_popup" rel="popup">Записаться на примерку</a>
+        </div>
+
+        <div class="contacts-block__map" id="map-tomsk"></div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="overlay"></div>
+  <div class="popup" id="popup">
+    <form action="" class="contacts-form">
+      <h2 class="contacts-form__title">Запись на примерку</h2>
+      <input class="input-field" type="text" name="name" id="" placeholder="Имя">
+      <input class="input-field" type="text" name="phone" id="" placeholder="Телефон">
+      <input class="input-field" type="text" name="email" id="" placeholder="E-mail">
+      <button class="btn" type="submit" id="submit">Записаться на примерку</button>
+    </form>
+    <div class="success-message">
+      <h2 class="success-message__title">Вы записаны на примерку</h2>
+      <div class="success-message__text">
+        <p>Наш менеджер свяжется с Вами в ближайшее время, чтобы уточнить детали. Спасибо!</p>
       </div>
     </div>
   </div>
