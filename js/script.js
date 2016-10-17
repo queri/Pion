@@ -41,9 +41,13 @@ $(document).ready(function() {
   });
 
 // gallery
-  $('.preview').on('click', function(){
-    var imgSRC = $(this).attr('src');
+
+  $('.preview__item').on('click', function(){
+    var imgSRC = $(this).children('img').attr('src');
+    $('.preview__item').removeClass('preview__item--active')
+    $(this).addClass('preview__item--active');
     $('#largeImg').attr('src', imgSRC);
+
   });
 
 // map
@@ -129,5 +133,13 @@ $(document).ready(function() {
     $(this).removeClass('btn-show');
     $('.success-btn').addClass('btn-show');
   });
+
+  $(".owl-carousel").owlCarousel({
+    singleItem: true,
+    autoPlay: 5000,
+    autoplayHoverPause:false,
+    transitionStyle : "fade"
+  });
+
 
 });

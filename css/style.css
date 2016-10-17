@@ -1760,6 +1760,38 @@ img{
   float: left;
   padding: 10px;
 }
+.preview__item{
+  position: relative;
+  display: block;
+}
+@media (min-width: 768px) {
+  .preview__item{
+    display: inline-block;
+    cursor: pointer;
+  }
+}
+@media (min-width: 992px) {
+  .preview__item{
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  .preview__item:after{
+    content: '';
+    display: block;
+    width: 70px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255,255,255,0.6);
+    z-index: 999;
+  }
+  .preview__item--active:after{
+    background-color: transparent;
+  }
+}
+
 @media (min-width: 768px) {
   .preview{
     max-height: 110px;
