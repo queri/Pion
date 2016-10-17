@@ -568,13 +568,16 @@ template {
 body{
   font-family: 'proxima-light';
   color: #777777;
+  font-size: 13px;
   letter-spacing: 0.05em;
   line-height: 1.4em;
+  height: 100%;
 }
 @media (min-width: 768px) {
   .bordered{
     border: 20px solid #dcecec;
     padding-bottom: 50px;
+    background: url(../img/pion_flower-big-center.svg) 60% top no-repeat,url(../img/pion_flower-small-left.svg) 0 65vh no-repeat,url(../img/pion_flower-small-center.svg) right 80vh no-repeat,url(../img/pion_flower-big-left-top.svg) 40% 170vh no-repeat,url(../img/pion_flower-small-right.svg) left 240vh no-repeat,url(../img/pion_flower-big-right-top.svg) right 340vh no-repeat,url(../img/pion_flower-small-left.svg) left 370vh no-repeat,url(../img/pion_flower-big-center.svg) right 410vh no-repeat,url(../img/pion_flower-small-center.svg) 40% 470vh no-repeat,url(../img/pion_flower-big-right.svg) left 540vh no-repeat,url(../img/pion_flower-small-left.svg) right 640vh no-repeat,url(../img/pion_flower-small-center.svg) left 670vh no-repeat;
   }
   .no-padding{
     padding-bottom: 0;
@@ -1039,6 +1042,13 @@ img{
 .promo {
   position: relative;
   padding-top: 70px;
+  z-index: 10;
+}
+@media (min-width: 768px) {
+  .promo {
+    background: url(../img/pion_flower-big-left-top.svg) 20% 10% no-repeat,
+    url(../img/pion_flower-small-left.svg) 95% 70vh no-repeat;
+  }
 }
 @media (min-width: 992px) {
   .promo {
@@ -1110,6 +1120,13 @@ img{
   .collection {
     padding-top: 20px;
   }
+@media (min-width: 768px) {
+  .collection {
+    background: url(../img/pion_flower-big-left-top.svg) 95% -35vh no-repeat,
+    url(../img/pion_flower-small-right.svg) 95% 70vh no-repeat,
+    url(../img/pion_flower-small-left.svg) 39% 10% no-repeat;
+  }
+}
 
 @media (min-width: 992px) {
   .collection {
@@ -1240,6 +1257,13 @@ img{
 }
 @media (min-width: 992px) {
   .about {
+    background: url(../img/pion_flower-small-right.svg) 85vw 55vh no-repeat,
+    url(../img/pion_flower-small-center.svg) 60% 10% no-repeat;
+  }
+}
+
+@media (min-width: 992px) {
+  .about {
     padding-top: 120px;
   }
 }
@@ -1324,6 +1348,12 @@ img{
 .contacts {
   padding-top: 40px;
 }
+@media (min-width: 768px) {
+  .contacts {
+    background: url(../img/pion_flower-big-center.svg) 40% 10% no-repeat;
+  }
+}
+
 .contacts__dscr {
   width: 100%;
   float: left;
@@ -1403,6 +1433,8 @@ img{
   border-bottom: 3px solid #dcecec;
   width: 80%;
   font-size: 13px;
+  background-color: transparent;
+  color: #777;
 }
 .textarea-field {
   height: 70px;
@@ -1414,6 +1446,8 @@ img{
   width: 80%;
   font-size: 13px;
   resize: none;
+  background-color: transparent;
+  color: #777;
 }
 .input-field::-webkit-input-placeholder {color:#777;}
 .input-field::-moz-placeholder {color:#777;}
@@ -1686,6 +1720,7 @@ img{
 
 
 /*                 DRESS CARD                  */
+
 .dress-card {
   padding-top: 110px;
   padding-bottom: 20px;
@@ -1704,121 +1739,66 @@ img{
   }
 }
 
-.large-img__wrapper{
-  display: none;
-}
-@media (min-width: 768px) {
-  .large-img__wrapper{
-    width: 33.32%;
-    float: left;
-    display: block;
-  }
-  .large-img__wrapper img{
-    height: 350px;
-    max-height: 350px;
-    width: auto;
-  }
-}
-@media (min-width: 992px) {
-  .large-img__wrapper{
-    width: 33.32%;
-    float: left;
-    display: block;
-    padding-bottom: 20px;
-  }
-  .large-img__wrapper img{
-    height: 437px;
-    max-height: 437px;
-    width: auto;
-  }
-}
-@media (min-width: 1200px) {
-  .large-img__wrapper{
-    width: 33.32%;
-    float: left;
-    display: block;
-  }
-  .large-img__wrapper img{
-    height: 453px;
-    max-height: 453px;
-  }
-}
-.preview__wrapper{
+
+
+
+.product{
   width: 100%;
+  margin-bottom: 40px;
+  padding-right: 10px;
 }
 @media (min-width: 768px) {
-  .preview__wrapper{
-    width: 28%;
-    float: left;
-    margin-right: -40px;
+  .product{
+    width: 52%;
+    padding-right: 0;
+    text-align: right;
   }
 }
 @media (min-width: 992px) {
-  .preview__wrapper{
-    width: 8.33%;
-    float: left;
-    margin-right: 10px;
+  .product{
+    width: 57%;
   }
 }
 @media (min-width: 1200px) {
-  .preview__wrapper{
-    width: 8.33%;
-    float: left;
-    margin-right: -8px;
+  .product{
+    width: 52%;
   }
 }
-.preview{
-  width: 50%;
+.product__slider{}
+.product__info,.product__slider{}
+.product{
+  height: 350px;
   float: left;
-  padding: 10px;
 }
-.preview__item{
-  position: relative;
-  display: block;
+.poduct__slider{
+  margin: auto;
+}
+.product__slider img{
+  width: auto;
+  height: 350px;
+  margin: auto;
 }
 @media (min-width: 768px) {
-  .preview__item{
-    display: inline-block;
-    cursor: pointer;
+  .product{
+    height: 450px;
+    float: left;
+  }
+  .product__slider img{
+    width: auto;
+    height: 450px;
+    margin: auto;
   }
 }
 @media (min-width: 992px) {
-  .preview__item{
-    display: block;
+  .product{
+    height: 474px;
   }
-}
-@media (min-width: 768px) {
-  .preview__item:after{
-    content: '';
-    display: block;
-    width: 70px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(255,255,255,0.6);
-    z-index: 999;
-  }
-  .preview__item--active:after{
-    background-color: transparent;
+  .product__slider img{
+    height: 474px;
   }
 }
 
-@media (min-width: 768px) {
-  .preview{
-    max-height: 110px;
-    padding: 0;
-    padding-bottom: 5px;
-    float: none;
-    width: auto;
-    cursor: pointer;
-  }
-}
-.preview__wrapper:after{
-  content: '';
-  display: block;
-  clear: both;
-}
+
 .dress-card__dscr{
   width: 100%;
   padding: 10px;
@@ -1830,11 +1810,20 @@ img{
     padding-left: 40px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .dress-card__dscr{
-    float: left;
+    width: 42%;
+    padding-left: 20px;
   }
 }
+@media (min-width: 1200px) {
+  .dress-card__dscr{
+    width: 45%;
+    padding-left: 40px;
+  }
+}
+
+
 .dress-card__title {
   font-family: 'Garamond-Med';
   font-size: 40px;
@@ -2627,7 +2616,4 @@ img{
   font-family: 'proxima-light';
   font-size: 13px;
   padding: 20px 50px 20px 50px;
-}
-#123{
-  display: none;
 }

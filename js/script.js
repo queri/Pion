@@ -11,7 +11,7 @@ $(document).ready(function() {
   $(document).on('click', '#moveSectionDown', function(){
     $.fn.fullpage.moveSectionDown();
   });
-        };
+  };
 
 // mobile-menu
 
@@ -40,15 +40,6 @@ $(document).ready(function() {
     $('#main-nav').addClass('mobile-nav--active');
   });
 
-// gallery
-
-  $('.preview__item').on('click', function(){
-    var imgSRC = $(this).children('img').attr('src');
-    $('.preview__item').removeClass('preview__item--active')
-    $(this).addClass('preview__item--active');
-    $('#largeImg').attr('src', imgSRC);
-
-  });
 
 // map
   var points = [
@@ -142,11 +133,56 @@ $(document).ready(function() {
     transitionStyle : "fade"
   });
 
-$(".fancybox").fancybox({
+// fancybox
+ $(".fancybox").fancybox({
     closeBtn    : false,
     helpers   : {
       title : { type : 'inside' },
         }
   });
+
+
+// lightSlider
+    $('#product-slider').lightSlider({
+      gallery: true,
+      item: 1,
+      vertical: true,
+      verticalHeight: 474,
+      vThumbWidth: 75,
+      thumbItem: 4,
+      thumbMargin: 10,
+      slideMargin: 10,
+      galleryMargin: 5,
+      controls: false,
+      responsive : [
+            {
+                breakpoint:1100,
+                settings: {
+                    verticalHeight: 474,
+                  }
+            },
+            {
+                breakpoint:980,
+                settings: {
+                    verticalHeight: 450,
+                  }
+            },
+            {
+                breakpoint:760,
+                settings: {
+                    verticalHeight: 350,
+                  }
+            },
+            {
+                breakpoint:480,
+                settings: {
+                    verticalHeight: 300,
+                  }
+            }
+        ]
+    });
+
+
+
 
 });

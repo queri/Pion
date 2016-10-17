@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <title>Pion</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/lightslider.css">
   <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body class="bordered no-padding">
 
@@ -74,32 +76,34 @@
       <div id="toggler" class="mobile-menu"><span></span></div>
     </div>
   </header>
-
-  <section class="dress-card">
-    <div class="container">
-      <div class="back-link back-link--on-slide">
+      <div class="back-link">
         <a href="collection.html" class="back-link__btn">К коллекции</a>
       </div>
+  <section class="dress-card">
+    <div class="container">
 
-      <div class="dress-card__gallery" id="gallery">
-        <div class="preview__wrapper">
-          <div class="preview__item">
-            <img src="img/collection-card1.jpg" alt=""  class="preview"/>
-          </div>
-          <div class="preview__item">
-            <img src="img/collection-card2.jpg" alt=""  class="preview"/>
-          </div>
-          <div class="preview__item">
-            <img src="img/collection-card3.jpg" alt=""  class="preview"/>
-          </div>
-          <div class="preview__item  preview__item--active">
-            <img src="img/dress-card.jpg" alt=""  class="preview"/>
-          </div>
-        </div>
-        <div class="large-img__wrapper">
-          <img id="largeImg" src="img/dress-card.jpg" />
-        </div>
+    <div class="product">
+      <div class="slider product__slider">
+        <ul id="product-slider">
+          <li data-thumb="img/collection-card1.jpg">
+            <img src="img/collection-card1.jpg" alt="" />
+          </li>
+          <li data-thumb="img/collection-card2.jpg">
+            <img src="img/collection-card2.jpg" alt="" />
+          </li>
+          <li data-thumb="img/collection-card3.jpg">
+            <img src="img/collection-card3.jpg" alt="" />
+          </li>
+          <li data-thumb="img/collection-card4.jpg">
+            <img src="img/collection-card4.jpg" alt="" />
+          </li>
+          <li data-thumb="img/collection-card5.jpg">
+            <img src="img/collection-card5.jpg" alt="" />
+          </li>
+        </ul>
       </div>
+    </div>
+
 
       <div class="dress-card__dscr">
         <h1 class="dress-card__title">Eva</h1>
@@ -136,9 +140,11 @@
   </div>
 
 
-  <script src="js/live.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery.fullpage.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.fancybox.js"></script>
+  <script src="js/lightslider.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
