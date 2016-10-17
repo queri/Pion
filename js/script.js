@@ -104,10 +104,10 @@ $(document).ready(function() {
   }
 
 // accordion
-  $('.accordion-block__title').on('click', function(){
+  $('.accordion-block__item').on('click', function(){
     console.log('123')
-    $(this).toggleClass('accordion-block__title--active');
-    $(this).next().toggleClass('accordion-block__text--show')
+    $('.accordion-block__item--active').removeClass('accordion-block__item--active');
+    $(this).addClass('accordion-block__item--active');
   });
 
 // Popup
@@ -134,6 +134,7 @@ $(document).ready(function() {
     $('.success-btn').addClass('btn-show');
   });
 
+// owl-carousel
   $(".owl-carousel").owlCarousel({
     singleItem: true,
     autoPlay: 5000,
@@ -141,5 +142,11 @@ $(document).ready(function() {
     transitionStyle : "fade"
   });
 
+$(".fancybox").fancybox({
+    closeBtn    : false,
+    helpers   : {
+      title : { type : 'inside' },
+        }
+  });
 
 });
