@@ -564,9 +564,7 @@ template {
 .container:after {
   clear: both;
 }
-html{
-  height: 100%;
-}
+
 body{
   font-family: 'proxima-light';
   color: #777777;
@@ -592,7 +590,6 @@ img{
   position: relative;
   padding-left: 10px;
   padding-right: 10px;
-  height: 100%;
 }
 @media (min-width: 768px) {
   .section{
@@ -652,6 +649,7 @@ img{
   padding-bottom: 32px;
   margin-bottom: 0;
   font-size: 0;
+  padding-top: 50px;
 }
 .scrolling__icon:after{
   content: '';
@@ -661,7 +659,7 @@ img{
   background-color: #dcecec;
   position: absolute;
   left: 50%;
- bottom: 0;
+  bottom: 0;
 }
 .scrolling__icon{
   display: block;
@@ -741,7 +739,7 @@ img{
   min-height: 90px;
   max-height: 110px;
   background-color: rgba(255, 255, 255, 0.4);
-  z-index: 5;
+  z-index: 50;
   padding-bottom: 20px;
 }
 @media (min-width: 768px) {
@@ -916,11 +914,11 @@ img{
   display: block;
   width: 20%;
   float: right;
-
-
   position: absolute;
   right: 0;
   top: 0;
+  z-index: 55;
+  cursor: pointer;
 }
 .mobile-menu span {
   display: block;
@@ -1072,13 +1070,12 @@ img{
     width: 42%;
     float: left;
     position: relative;
-    right: -90px;
+    right: 0px;
   }
 }
 @media (min-width: 992px) {
   .promo__dscr {
     width: 40.33%;
-    float: left;
     right: -90px;
     top: 70px;
   }
@@ -1086,8 +1083,6 @@ img{
 @media (min-width: 1200px) {
   .promo__dscr {
     width: 33.33%;
-    float: left;
-    right: -90px;
     top: 120px;
   }
 }
@@ -1110,12 +1105,15 @@ img{
 }
 @media (min-width: 992px) {
   .promo__img {
-    padding-bottom: 30px;
+    width: 58%;
+    float: left;
+    padding-right: 10px;
+    padding-bottom: 50px;
   }
 }
 @media (min-width: 1200px) {
   .promo__img {
-    padding-bottom: 0;
+    padding-bottom: 30px;
   }
 }
 
@@ -1128,12 +1126,14 @@ img{
     background: url(../img/pion_flower-big-left-top.svg) 95% -35vh no-repeat,
     url(../img/pion_flower-small-right.svg) 95% 70vh no-repeat,
     url(../img/pion_flower-small-left.svg) 39% 10% no-repeat;
+    padding-bottom: 40px;
   }
 }
 
 @media (min-width: 992px) {
   .collection {
     padding-top: 150px;
+    padding-bottom: 0;
   }
 }
 @media (min-width: 1200px) {
@@ -1147,9 +1147,9 @@ img{
 }
 @media (min-width: 768px) {
   .collection__dscr {
-    width: 33.33%;
+    width: 38.33%;
     float: left;
-    margin-left: 90px;
+    margin-left: 0;
   }
 }
 @media (min-width: 992px) {
@@ -1164,8 +1164,9 @@ img{
   font-family: 'proxima-light';
   font-size: 13px;
 }
+
 .collection__item {
-  width: 70%;
+  width: 100%;
   float: left;
   position: relative;
 }
@@ -1178,6 +1179,7 @@ img{
 @media (min-width: 992px) {
   .collection__item {
     margin-top: 0;
+    margin-left: 0;
   }
 }
 .collection__title {
@@ -1190,10 +1192,11 @@ img{
 
 @media (min-width: 768px) {
   .collection__title {
-    background-color: none;
+    background-color: transparent;
   }
   .collection__item--left{
     padding-left: 30px;
+    margin-left: 10px;
   }
   .collection__item--left .collection__title{
     top: 0;
@@ -1212,6 +1215,7 @@ img{
   .collection__item--right{
     padding-top: 80px;
     padding-left: 30px;
+    margin-left: 40px;
   }
   .collection__item--right .collection__title{
     bottom: 0;
@@ -1225,7 +1229,6 @@ img{
     text-align: right;
     padding-right: 30px;
   }
-
   .collection__item--right .collection__name:after{
     content: '';
     display: inline-block;
@@ -1249,25 +1252,31 @@ img{
   }
 }
 @media (min-width: 992px) {
+  .collection__item--left{
+    margin-left: 0;
+  }
   .collection__item--right{
     padding-top: 70px;
+    margin-left: 0;
   }
 }
 
 /*About block*/
 .about {
-  padding-top: 20px;
+  padding-top: 0px;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .about {
     background: url(../img/pion_flower-small-right.svg) 85vw 55vh no-repeat,
     url(../img/pion_flower-small-center.svg) 60% 10% no-repeat;
+    padding-top: 20px;
+    padding-bottom: 30px;
   }
 }
-
 @media (min-width: 992px) {
   .about {
     padding-top: 120px;
+    padding-bottom: 0;
   }
 }
 @media (min-width: 1200px) {
@@ -1284,11 +1293,18 @@ img{
   float: left;
   padding-top: 20px;
 }
+@media (min-width: 768px) {
+  .about__dscr {
+    width: 40.33%;
+    float: left;
+    padding-top: 20px;
+    margin-left: 0px;
+    padding-right: 20px;
+  }
+}
 @media (min-width: 992px) {
   .about__dscr {
     width: 33.33%;
-    float: left;
-    padding-top: 20px;
     margin-left: 90px;
   }
 }
@@ -1303,14 +1319,21 @@ img{
   padding-left: 60px;
   position: relative;
   padding-right: 30px;
+  margin-left: 10px;
+}
+@media (min-width: 768px) {
+  .paragraph {
+    width: 58%;
+    padding-left: 60px;
+    margin-left: 0;
+    position: relative;
+    padding-right: 0px;
+  }
 }
 @media (min-width: 992px) {
   .paragraph {
-    width: 50%;
-    float: left;
-    padding-left: 60px;
     margin-left: 40px;
-    position: relative;
+    width: 50%;
     padding-right: 30px;
   }
 }
@@ -1349,14 +1372,20 @@ img{
 
 /*Contacts block*/
 .contacts {
-  padding-top: 40px;
+  padding-top: 20px;
 }
 @media (min-width: 768px) {
   .contacts {
     background: url(../img/pion_flower-big-center.svg) 40% 10% no-repeat;
+    padding-top: 40px;
+    padding-bottom: 30px;
   }
 }
-
+@media (min-width: 992px) {
+  .contacts {
+    padding-bottom: 0;
+  }
+}
 .contacts__dscr {
   width: 100%;
   float: left;
@@ -1365,6 +1394,12 @@ img{
   .contacts__dscr {
     width: 42.66%;
     float: left;
+    margin-left: 0px;
+  }
+}
+@media (min-width: 992px) {
+  .contacts__dscr {
+    width: 42.66%;
     margin-left: 90px;
   }
 }
@@ -1417,6 +1452,12 @@ img{
   border: 8px solid #dcecec;
 }
 @media (min-width: 768px) {
+  .contacts__map {
+    width: 56.7%;
+    height: 480px;
+  }
+}
+@media (min-width: 992px) {
   .contacts__map {
     width: 40.7%;
     height: 480px;
@@ -1740,6 +1781,10 @@ img{
 @media (min-width: 992px) {
   .dress-card__gallery {
     margin-left: 100px;
+  }
+  .dress-card {
+    padding-top: 25vh;
+    padding-bottom: 20vh;
   }
 }
 
@@ -2490,6 +2535,7 @@ img{
   border-bottom: 1px solid #e8e8e8;
   font-family: 'Garamond-Med';
   font-size: 20px;
+  line-height: 1.3em;
   position: relative;
   cursor: pointer;
   -webkit-user-select: none;

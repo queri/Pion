@@ -128,7 +128,7 @@ $(document).ready(function() {
 // owl-carousel
   $(".owl-carousel").owlCarousel({
     singleItem: true,
-    autoPlay: 5000,
+    autoPlay: 4000,
     autoplayHoverPause:false,
     transitionStyle : "fade"
   });
