@@ -1,3 +1,10 @@
+$(window).on('load', function () {
+    var $preloader = $('#page-preloader'),
+        $spinner   = $preloader.find('.spinner');
+    $spinner.fadeOut();
+    $preloader.delay(350).fadeOut('slow');
+});
+
 $(document).ready(function() {
       var window_size = $(window).width();
         if(window_size >= 960) {
@@ -41,65 +48,34 @@ $(document).ready(function() {
   });
 
 
-// map
-  var points = [
-    {lat: 59.959088, lng: 30.313942},
-    {lat: 56.501613, lng: 84.990466}
-  ];
+// accordion
 
-  var images = [
-    'img/map-icon.png',
-  ];
+if ($('.accordion-block')) {
+    (function($) {
+      var allPanels = $('.accordion-block__text').hide();
+      var allTitles = $('.accordion-block__title');
 
-  $.ajax({
-    url: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA-Y3BlWXDFiDvHrjhVJNl1BfSyHkkYAEw&callback=initMap',
-      dataType: 'jsonp',
-    jsonp: 'callback',
-    success: mapInit
-  });
+      $('.accordion-block__title').click(function() {
+        $this = $(this);
+        $target =  $this.parent().find('.accordion-block__text');
 
-  function mapInit() {
-    var mapS = new google.maps.Map($('#map-spb').get(0), {
-      center: {lat: 59.959088, lng: 30.313942},
-      zoom: 17,
-      disableDefaultUI: true,
-      zoomControl: true,
-      scrollwheel: false, // убираем скролл колесом
-    });
+        $this.addClass('active');
 
-      var mapT = new google.maps.Map($('#map-tomsk').get(0), {
-      center: {lat: 56.501613, lng: 84.990466},
-      zoom: 17,
-      disableDefaultUI: true,
-      zoomControl: true,
-      scrollwheel: false, // убираем скролл колесом
-    });
+        if(!$target.hasClass('active')){
+           allPanels.removeClass('active').slideUp();
+           $target.addClass('active').slideDown();
 
-    var markers = [];
+           allTitles.removeClass('active');
+           $this.addClass('active');
+        }
 
-    points.forEach(function (position, i) {
-      markers.push(new google.maps.Marker({
-        position: position,
-        map: mapS,
-        icon: images[0]
-      }));
-    });
+        return false;
+      });
 
-    points.forEach(function (position, i) {
-      markers.push(new google.maps.Marker({
-        position: position,
-        map: mapT,
-        icon: images[0]
-      }));
-    });
+    })(jQuery);
   }
 
-// accordion
-  $('.accordion-block__item').on('click', function(){
-    console.log('123')
-    $('.accordion-block__item--active').removeClass('accordion-block__item--active');
-    $(this).addClass('accordion-block__item--active');
-  });
+
 
 // Popup
   $('#open_popup').click(function(e) {
@@ -147,8 +123,8 @@ $(document).ready(function() {
       gallery: true,
       item: 1,
       vertical: true,
-      verticalHeight: 474,
-      vThumbWidth: 75,
+      verticalHeight: 600,
+      vThumbWidth: 100,
       thumbItem: 4,
       thumbMargin: 10,
       slideMargin: 10,
@@ -156,27 +132,23 @@ $(document).ready(function() {
       controls: false,
       responsive : [
             {
-                breakpoint:1100,
+                breakpoint:1200,
                 settings: {
-                    verticalHeight: 474,
+                    verticalHeight: 600,
                   }
             },
             {
-                breakpoint:980,
+                breakpoint:992,
                 settings: {
-                    verticalHeight: 450,
+                    verticalHeight: 500,
+                    vThumbWidth: 80,
                   }
             },
             {
                 breakpoint:760,
                 settings: {
                     verticalHeight: 350,
-                  }
-            },
-            {
-                breakpoint:480,
-                settings: {
-                    verticalHeight: 300,
+                    vThumbWidth: 70,
                   }
             }
         ]

@@ -8,6 +8,11 @@
 </head>
 <body class="bordered">
 
+  <span class="border  bd-top"></span>
+  <span class="border  bd-right"></span>
+  <span class="border  bd-bottom"></span>
+  <span class="border  bd-left"></span>
+
   <header class="page-header" id="header">
     <div class="container">
 
@@ -32,7 +37,7 @@
           </ul>
         </li>
         <li class="main-nav__item"><a href="blog.html" class="main-nav__link">Блог</a></li>
-        <li class="main-nav__item  main-nav__link--active"><a href="contacts.html" class="main-nav__link">Где купить</a></li>
+        <li class="main-nav__item"><a href="contacts.html" class="main-nav__link  main-nav__link--active">Где купить</a></li>
       </nav>
 
       <div class="page-header__contacts">
@@ -155,5 +160,46 @@
   <script src="js/jquery.fancybox.js"></script>
   <script src="js/lightslider.js"></script>
   <script src="js/script.js"></script>
+  <script>
+  $.ajax({
+    url: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD2F3NydFqcBG6isXBOj_EPmk-7eqbfvaI&callback=initMap',
+      dataType: 'jsonp',
+    jsonp: 'callback',
+    success: initMap
+  });
+  function initMap() {
+    var myLatLng = {lat: 59.959088, lng: 30.313942};
+    var myLatLng1 = {lat: 56.501613, lng: 84.990466};
+
+    var images = 'img/map-icon.png';
+    // Create a map object and specify the DOM element for display.
+    var map = new google.maps.Map(document.getElementById('map-spb'), {
+      center: myLatLng,
+      scrollwheel: false,
+      zoom: 17,
+      disableDefaultUI: true,
+      zoomControl: true,
+    });
+    var mapNew = new google.maps.Map(document.getElementById('map-tomsk'), {
+      center: myLatLng1,
+      scrollwheel: false,
+      zoom: 17,
+      disableDefaultUI: true,
+      zoomControl: true,
+    });
+    // Create a marker and set its position.
+    var marker = new google.maps.Marker({
+      map: map,
+      position: myLatLng,
+      icon: images
+    });
+    var marker = new google.maps.Marker({
+      map: mapNew,
+      position: myLatLng1,
+      icon: images
+    });
+  }
+  </script>
+
 </body>
 </html>

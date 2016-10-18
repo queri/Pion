@@ -210,12 +210,12 @@
 }
 @media (min-width: 992px) {
     .lSSlideOuter.vertical .lSGallery {
-        left: 25%;
+        left: 5%;
     }
 }
 @media (min-width: 1200px) {
     .lSSlideOuter.vertical .lSGallery {
-        left: 32%;
+        left: 14.5%;
     }
 }
 .lSSlideOuter.vertical .lightSlider > * {

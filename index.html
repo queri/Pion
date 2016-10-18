@@ -4,12 +4,40 @@
   <meta charset="UTF-8">
   <title>Pion</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    #page-preloader {
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: #fff;
+      z-index: 100500;
+    }
+    #page-preloader .spinner {
+      width: 250px;
+      height: 250px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      background: url('img/pion-logo.svg') no-repeat;
+    }
+  </style>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/jquery.fullpage.css">
   <link rel="stylesheet" href="css/owl.carousel.css">
   <link rel="stylesheet" href="css/owl.transitions.css">
 </head>
 <body>
+  <div id="page-preloader"><span class="spinner"></span></div>
+  <span class="border  bd-top"></span>
+  <span class="border  bd-right"></span>
+  <span class="border  bd-bottom"></span>
+  <span class="border  bd-left"></span>
+
 
   <header class="page-header" id="header">
     <div class="container">
@@ -109,11 +137,7 @@
         <li data-menuanchor="thirdPage"><a href="#thirdPage" class="pagination__link"></a></li>
         <li data-menuanchor="fourthPage"><a href="#fourthPage" class="pagination__link"></a></li>
       </ul>
-      <div class="scrolling" >
-        <a href="#" class="scrolling__icon" id="moveSectionDown">
-          <img src="img/MOUSE.svg" alt="">
-        </a>
-      </div>
+      <span class="scrolling__icon" id="moveSectionDown"></span>
     </section>
 
     <section class="section  fp-auto-height  collection">
@@ -160,11 +184,7 @@
           </div>
         </div>
       </div>
-      <div class="scrolling" >
-        <a href="#" class="scrolling__icon" id="moveSectionDown">
-          <img src="img/MOUSE.svg" alt="">
-        </a>
-      </div>
+      <span class="scrolling__icon" id="moveSectionDown"></span>
     </section>
 
     <section class="section  fp-auto-height  about">
@@ -189,11 +209,7 @@
           </div>
         </div>
       </div>
-      <div class="scrolling" >
-        <a href="#" class="scrolling__icon" id="moveSectionDown">
-          <img src="img/MOUSE.svg" alt="">
-        </a>
-      </div>
+      <span class="scrolling__icon" id="moveSectionDown"></span>
     </section>
 
     <section class="section  fp-auto-height  contacts">
@@ -229,7 +245,7 @@
             </button>
           </form>
         </div>
-        <div class="contacts__map" id="map-spb"></div>
+        <div class="contacts__map" id="map-main"></div>
       </div>
     </section>
   </div>
@@ -251,12 +267,37 @@
     </div>
   </div>
 
-
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery.fullpage.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/jquery.fancybox.js"></script>
   <script src="js/lightslider.js"></script>
   <script src="js/script.js"></script>
+  <script>
+  $.ajax({
+    url: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD2F3NydFqcBG6isXBOj_EPmk-7eqbfvaI&callback=initMap',
+      dataType: 'jsonp',
+    jsonp: 'callback',
+    success: initMap
+  });
+  function initMap() {
+    var myLatLng = {lat: 59.959088, lng: 30.313942};
+    var images = 'img/map-icon.png';
+    // Create a map object and specify the DOM element for display.
+    var map = new google.maps.Map(document.getElementById('map-main'), {
+      center: myLatLng,
+      scrollwheel: false,
+      zoom: 17,
+      disableDefaultUI: true,
+      zoomControl: true,
+    });
+    // Create a marker and set its position.
+    var marker = new google.maps.Marker({
+      map: map,
+      position: myLatLng,
+      icon: images
+    });
+  }
+  </script>
 </body>
 </html>
