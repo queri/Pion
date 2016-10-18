@@ -564,7 +564,9 @@ template {
 .container:after {
   clear: both;
 }
-
+html{
+  height: 100%;
+}
 body{
   font-family: 'proxima-light';
   color: #777777;
@@ -590,6 +592,7 @@ img{
   position: relative;
   padding-left: 10px;
   padding-right: 10px;
+  height: 100%;
 }
 @media (min-width: 768px) {
   .section{
@@ -1498,6 +1501,7 @@ img{
     display: block;
     position: fixed;
     top: 300px;
+    z-index: 20;
   }
 }
 .back-link__btn {
@@ -1819,7 +1823,7 @@ img{
 @media (min-width: 1200px) {
   .dress-card__dscr{
     width: 45%;
-    padding-left: 40px;
+    padding-left: 60px;
   }
 }
 
@@ -1852,14 +1856,15 @@ img{
   color: #393939;
   display: block;
   padding-bottom: 40px;
+  padding-top: 40px;
 }
 .dress-card__currency {
   font-size: 14px;
 }
 
-.back-link--on-slide {
+/*.back-link--on-slide {
   display: none;
-}
+}*/
 @media (min-width: 992px) {
 /*  .back-link--on-slide {
     display: block;

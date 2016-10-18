@@ -182,7 +182,12 @@ $(document).ready(function() {
         ]
     });
 
-
+$(".fancy-gallery").fancybox({
+    closeBtn    : true,
+    helpers   : {
+      title : { type : 'inside' },
+        }
+  });
 
 
 });
