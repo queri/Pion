@@ -184,6 +184,7 @@ $(document).ready(function() {
 
 $(".fancy-gallery").fancybox({
     closeBtn    : true,
+    opacity: true,
     helpers   : {
       title : { type : 'inside' },
         }
