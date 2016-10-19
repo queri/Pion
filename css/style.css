@@ -1921,7 +1921,11 @@ img{
     height: 600px;
   }
 }
-
+@media (min-width: 992px) {
+  .product{
+    margin-left: 5%;
+  }
+}
 .dress-card__dscr{
   width: 100%;
   padding: 10px;
@@ -1941,7 +1945,7 @@ img{
 }
 @media (min-width: 1200px) {
   .dress-card__dscr{
-    width: 45%;
+    width: 40%;
     padding-left: 60px;
     padding-top: 40px;
   }
