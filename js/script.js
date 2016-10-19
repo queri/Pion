@@ -154,6 +154,7 @@ if ($('.accordion-block')) {
                 settings: {
                     verticalHeight: 300,
                     vThumbWidth: 70,
+                    thumbItem: 3,
                   }
             }
         ]
