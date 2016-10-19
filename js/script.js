@@ -128,6 +128,7 @@ if ($('.accordion-block')) {
       slideMargin: 10,
       galleryMargin: 5,
       controls: false,
+      enableTouch: false,
       responsive : [
             {
                 breakpoint:1200,

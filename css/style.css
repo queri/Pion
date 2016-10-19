@@ -1898,7 +1898,6 @@ img{
 .product__info,.product__slider{}
 .product{
   height: 300px;
-  float: left;
 }
 .poduct__slider{
   margin: auto;
@@ -1911,7 +1910,7 @@ img{
 @media (min-width: 480px) {
   .product{
     height: 350px;
-    float: left;
+    text-align: right;
   }
   .product__slider img{
     width: auto;
