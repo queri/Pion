@@ -1934,12 +1934,13 @@ img{
 }
 .dress-card__dscr{
   width: 100%;
-  padding: 10px;
+  padding: 15px;
 }
 @media (min-width: 768px) {
   .dress-card__dscr{
     width: 47%;
     float: left;
+    padding: 10px;
     padding-left: 40px;
   }
 }
