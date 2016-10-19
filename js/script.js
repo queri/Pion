@@ -138,7 +138,7 @@ if ($('.accordion-block')) {
             {
                 breakpoint:992,
                 settings: {
-                    verticalHeight: 500,
+                    verticalHeight: 450,
                     vThumbWidth: 80,
                   }
             },
@@ -146,6 +146,13 @@ if ($('.accordion-block')) {
                 breakpoint:760,
                 settings: {
                     verticalHeight: 350,
+                    vThumbWidth: 70,
+                  }
+            },
+            {
+                breakpoint:480,
+                settings: {
+                    verticalHeight: 300,
                     vThumbWidth: 70,
                   }
             }
