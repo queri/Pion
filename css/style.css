@@ -494,6 +494,7 @@ body{
 h1,h2,h3,h4,h5,a,p,span{
   letter-spacing: 0.08em;
   line-height: 1.4em;
+  text-decoration: none;
 }
 @media (min-width: 768px) {
   .bordered{
@@ -588,16 +589,6 @@ img{
 .pagination .active a{
   background-color: #dcecec;
 }
-/*.scrolling {
-  display: none;
-  width: 100%;
-  text-align: center;
-  position: relative;
-  padding-bottom: 32px;
-  margin-bottom: 0;
-  font-size: 0;
-  background-color: #000;
-}*/
 .scrolling__icon{
   position: absolute;
   bottom: 52px;
@@ -609,6 +600,16 @@ img{
   background-position: center;
   cursor: pointer;
   display: none;
+}
+.scrolling__icon:after{
+  content: '';
+  display: block;
+  width: 1px;
+  height: 32px;
+  background-color: #dcecec;
+  position: absolute;
+  left: 50%;
+  top: 100%;
 }
 @media (min-width: 992px) {
   .scrolling__icon{
@@ -635,7 +636,7 @@ img{
   max-width: 100%;
   -webkit-transition: all .5s;
   transition: all .5s;
-  border: 1px solid #777777;
+  border: 1px solid #dcecec;
   outline: none;
   padding: 10px 35px;
   margin-top: 20px;
@@ -721,7 +722,7 @@ img{
   right: 0;
   min-height: 90px;
   max-height: 110px;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.9);
   z-index: 50;
   padding-bottom: 20px;
 }
@@ -916,6 +917,9 @@ img{
   top: 0;
   z-index: 55;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
 }
 .mobile-menu span {
   display: block;
@@ -924,7 +928,8 @@ img{
   background-color: #777;
   position: relative;
   margin-left: 30%;
-  margin-top: 60px;
+  margin-top: 65px;
+  transition: background .3s .5s;
 }
 @media (min-width: 768px) {
   .mobile-menu span {
@@ -940,6 +945,7 @@ img{
   height: 5px;
   position: absolute;
   background-color: #777;
+  transition: top .3s .6s, transform .3s;
 }
 .mobile-menu span:before {
   top: -10px;
@@ -954,18 +960,21 @@ img{
 .mobile-menu--close span{
   background-color: transparent;
   padding-top: 0;
+  transition: background .3s 0;
 }
 .mobile-menu--close span:before{
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
   top: 5px;
+  transition: top .3s, transform .3s .5s;
 }
 .mobile-menu--close span:after{
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
   top: 5px;
+  transition: top .3s, transform .3s .5s;
 }
 @media (min-width: 992px) {
   .mobile-menu{
@@ -984,6 +993,7 @@ img{
   top: 0;
   left: 0;
   background-color: #dcecec;
+  animation: popup .5s;
 }
 #collection-nav{
   width: 100%;
@@ -1048,7 +1058,7 @@ img{
 /*Promo block*/
 .promo {
   position: relative;
-  padding-top: 70px;
+  padding-top: 80px;
   z-index: 10;
   text-align: center;
   width: 100%;
@@ -1204,11 +1214,18 @@ img{
 .collection__subtitle{
   display: block;
   padding: 5px;
+  color: #777;
+  font-family: 'proxima-light';
+  font-size: 13px;
+  text-transform: lowercase;
 }
 .collection__name{
   margin: 0;
   margin-bottom: 10px;
   padding: 5px;
+  color: #393939;
+  font-size: 18px;
+  font-family: 'proxima-semibold';
 }
 @media (min-width: 768px) {
   .collection__title {
@@ -1219,7 +1236,7 @@ img{
     margin-left: 10px;
   }
   .collection__item--left .collection__title{
-    top: 0;
+    top: 15px;
     left: 100%;
     padding-left: 60px;
   }
@@ -1233,12 +1250,12 @@ img{
     left: -40px;
   }
   .collection__item--right{
-    padding-top: 80px;
-    padding-left: 30px;
+    margin-top: 100px;
+    padding-left: 20px;
     margin-left: 40px;
   }
   .collection__item--right .collection__title{
-    bottom: 0;
+    bottom: 15px;
     right: 0;
     text-align: right;
     padding-right: 30px;
@@ -1256,19 +1273,23 @@ img{
     width: 80px;
     background-color: #dcecec;
     position: absolute;
-    top: 55%;
+    top: 34%;
     right: -70px;
   }
   .collection__subtitle{
     font-family: 'proxima-light';
     font-size: 13px;
     text-transform: lowercase;
+    padding: 0;
+    margin: 0;
+    line-height: 0.7;
   }
   .collection__name{
     font-family: 'proxima-semibold';
     font-size: 18px;
     color: #393939;
-    margin-top: 3px;
+    margin-top: 0;
+    padding: 0;
   }
 }
 @media (min-width: 992px) {
@@ -1276,8 +1297,9 @@ img{
     margin-left: 0;
   }
   .collection__item--right{
-    padding-top: 70px;
     margin-left: 0;
+    margin-top: 80px;
+    padding-left: 40px;
   }
 }
 
@@ -1727,9 +1749,8 @@ img{
 }
 .collection-card {
   width: 95%;
-  margin: 15px auto 15px;
+  margin: 15px auto 0;
   position: relative;
-  height: 450px;
   float: left;
   text-align: center;
   overflow: hidden;
@@ -1767,15 +1788,17 @@ img{
 }
 .collection-card__photo {
   position: relative;
+  overflow: hidden;
 }
 .collection-card__active-photo{
   -webkit-transition: opacity 0.5s ease-out;
   transition: opacity 0.5s ease-out;
+  max-width: 100%;
+  max-height: 100%;
 }
 .collection-card__hover-photo{
   max-width: 100%;
   max-height: 100%;
-  height: 450px;
   position: absolute;
   top: 0;
   left: 0;
@@ -1828,6 +1851,7 @@ img{
 .btn-wrapper{
   width: 100%;
   text-align: center;
+  margin-top: 25px;
 }
 @media (min-width: 992px) {
   .btn-wrapper--blog{
@@ -2164,7 +2188,9 @@ img{
 .about-studio__photo {
   width: 300px;
 }
-
+.about-studio__photo img{
+  padding-bottom: 5px;
+}
 @media (min-width: 768px) {
   .about-studio__photo {
     width: 50%;
@@ -2173,7 +2199,7 @@ img{
 }
 @media (min-width: 1200px) {
   .about-studio__photo {
-    width: 60%;
+    width: 54%;
     float: left;
   }
   .about-studio__photo img{
@@ -2192,7 +2218,7 @@ img{
 }
 @media (min-width: 1200px) {
   .about-studio__photo-small img{
-    height: 300px;
+    height: 250px;
   }
 }
 .about-studio__photo-small img:nth-child(n+2){
@@ -2224,7 +2250,7 @@ img{
 @media (min-width: 1200px) {
   .about-studio__dscr {
     width: 40%;
-    padding-top: 370px;
+    padding-top: 280px;
     padding-left: 50px;
     padding-right: 0;
   }
@@ -2237,8 +2263,8 @@ img{
 }
 @media (min-width: 768px) {
   .about-studio__text {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 10px;
+    padding-bottom: 40px;
     padding-right: 10px;
   }
 }
