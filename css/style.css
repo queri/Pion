@@ -928,7 +928,7 @@ img{
   background-color: #777;
   position: relative;
   margin-left: 30%;
-  margin-top: 65px;
+  margin-top: 53px;
   transition: background .3s .5s;
 }
 @media (min-width: 768px) {
