@@ -1058,7 +1058,7 @@ img{
 /*Promo block*/
 .promo {
   position: relative;
-  padding-top: 80px;
+  padding-top: 100px;
   z-index: 10;
   text-align: center;
   width: 100%;
