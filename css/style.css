@@ -1934,7 +1934,9 @@ img{
 }
 .dress-card__dscr{
   width: 100%;
-  padding: 15px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 @media (min-width: 768px) {
   .dress-card__dscr{
