@@ -2002,6 +2002,18 @@ img{
 .dress-card__currency {
   font-size: 14px;
 }
+.btn-wrapper--dress{
+  text-align: center;
+  padding-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .btn-wrapper--dress{
+    text-align: left;
+    padding-bottom: 0;
+  }
+}
+
+
 
 .nav-link__wrapper {
   width: 100%;
@@ -2716,15 +2728,15 @@ img{
   border: 20px solid #dcecec;
   background:#fff;
   width:300px;
-  height:500px;
+  height:450px;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: auto;
   z-index:1000;
+  padding-bottom: 10px;
   text-align: center;
-  padding-top: 50px;
   -webkit-animation: popup 1s;
           animation: popup 1s;
 }
@@ -2742,15 +2754,22 @@ img{
   .popup {
     width:570px;
     height:500px;
+    padding-top: 50px;
   }
 }
 .popup .contacts-form{
   width: 100%;
   margin: 0 auto;
 }
+.popup .contacts-form__title{
+  padding-bottom: 0;
+}
 @media (min-width: 768px) {
   .popup .contacts-form{
     width: 80%;
+  }
+  .popup .contacts-form__title{
+    padding-bottom: 20px;
   }
 }
 .success-message{
@@ -2797,5 +2816,10 @@ img{
 .success-message__text{
   font-family: 'proxima-light';
   font-size: 13px;
-  padding: 20px 50px 20px 50px;
+  padding: 10px;
+}
+@media (min-width: 768px) {
+  .success-message__text{
+    padding: 20px 50px 20px 50px;
+  }
 }
