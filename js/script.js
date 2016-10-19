@@ -9,9 +9,7 @@ $(document).ready(function() {
       var window_size = $(window).width();
         if(window_size >= 960) {
             $('#fullpage').fullpage({
-        //Navigation
         menu: '#menu',
-        // lockAnchors: false,
         anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage']
     });
 

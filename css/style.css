@@ -492,13 +492,9 @@ h1,h2,h3,h4,h5,a,p,span{
 }
 @media (min-width: 768px) {
   .bordered{
-/*    border: 20px solid #dcecec;*/
-/*    padding-bottom: 50px;*/
+    padding-bottom: 50px;
     background: url(../img/pion_flower-big-center.svg) 60% top no-repeat,url(../img/pion_flower-small-left.svg) 0 65vh no-repeat,url(../img/pion_flower-small-center.svg) right 80vh no-repeat,url(../img/pion_flower-big-left-top.svg) 40% 170vh no-repeat,url(../img/pion_flower-small-right.svg) left 240vh no-repeat,url(../img/pion_flower-big-right-top.svg) right 340vh no-repeat,url(../img/pion_flower-small-left.svg) left 370vh no-repeat,url(../img/pion_flower-big-center.svg) right 410vh no-repeat,url(../img/pion_flower-small-center.svg) 40% 470vh no-repeat,url(../img/pion_flower-big-right.svg) left 540vh no-repeat,url(../img/pion_flower-small-left.svg) right 640vh no-repeat,url(../img/pion_flower-small-center.svg) left 670vh no-repeat;
   }
-/*  .no-padding{
-    padding-bottom: 0;
-  }*/
 }
 img{
   max-width: 100%;
@@ -1874,7 +1870,6 @@ img{
 
 .product{
   width: 100%;
-  margin-bottom: 40px;
   padding-right: 10px;
 }
 @media (min-width: 768px) {
@@ -1894,7 +1889,6 @@ img{
     width: 52%;
   }
 }
-.product__slider{}
 .product__info,.product__slider{}
 .product{
   height: 350px;
@@ -1927,7 +1921,6 @@ img{
     height: 600px;
   }
 }
-
 
 .dress-card__dscr{
   width: 100%;
