@@ -7,7 +7,7 @@ $(window).on('load', function () {
 
 $(document).ready(function() {
       var window_size = $(window).width();
-        if(window_size >= 1100) {
+        if(window_size >= 1180) {
             $('#fullpage').fullpage({
         menu: '#menu',
         anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
