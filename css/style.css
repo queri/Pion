@@ -601,19 +601,19 @@ img{
   cursor: pointer;
   display: none;
 }
-.scrolling__icon:after{
-  content: '';
-  display: block;
-  width: 1px;
-  height: 32px;
-  background-color: #dcecec;
-  position: absolute;
-  left: 50%;
-  top: 100%;
-}
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .scrolling__icon{
     display: block;
+  }
+  .scrolling__icon:after{
+    content: '';
+    display: block;
+    width: 1px;
+    height: 32px;
+    background-color: #dcecec;
+    position: absolute;
+    left: 50%;
+    top: 100%;
   }
 }
 /*All btn*/
@@ -1613,23 +1613,12 @@ img{
 .back-link {
   display: none;
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .back-link {
     display: block;
     position: fixed;
     top: 300px;
     z-index: 20;
-  }
-  .back-link--top{
-    position: relative;
-    top: 100px;
-  }
-}
-@media (min-width: 1200px) {
-  .back-link--top{
-    display: block;
-    position: fixed;
-    top: 300px;
   }
 }
 .back-link__btn {
@@ -1973,7 +1962,7 @@ img{
 @media (min-width: 992px) {
   .dress-card__dscr{
     width: 42%;
-    padding-left: 20px;
+    padding-left: 40px;
   }
 }
 @media (min-width: 1200px) {
@@ -2068,7 +2057,6 @@ img{
 @media (min-width: 992px) {
   .nav-link {
     float: none;
-    width: 40%;
     display: inline-block;
   }
 }
@@ -2116,17 +2104,6 @@ img{
 
 
 /*                  ABOUT PAGE                */
-.back-link--about {
-  display: none;
-}
-@media (min-width: 992px) {
-/*  .back-link--about {
-    width: 14%;
-    display: block;
-    padding-top: 200px;
-    float: left;
-  }*/
-}
 .studio {
   padding: 110px 10px 10px 10px;
 }
