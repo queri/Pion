@@ -2732,6 +2732,7 @@ img{
   z-index:1000;
   padding-bottom: 10px;
   text-align: center;
+  overflow: auto;
   -webkit-animation: popup 1s;
           animation: popup 1s;
 }
