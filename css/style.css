@@ -2723,7 +2723,7 @@ img{
   position:fixed;
   border: 20px solid #dcecec;
   background:#fff;
-  width:300px;
+  width:310px;
   height:450px;
   max-height: 100%;
   top: 0;
@@ -2739,18 +2739,7 @@ img{
     overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
-@media (min-width: 768px) {
-  .popup {
-    width:300px;
-  }
-}
-@media (min-width: 768px) {
-  .popup {
-    overflow: visible;
-    width:300px;
-    height:450px;
-  }
-}
+
 .popup--success{
   background-color: #fff;
 }
@@ -2760,11 +2749,17 @@ img{
 .popup--success .success-message{
   display: block;
 }
+@media (min-width: 480px) {
+  .popup {
+    width:460px;
+  }
+}
 @media (min-width: 768px) {
   .popup {
     width:570px;
     height:500px;
     padding-top: 50px;
+    overflow: visible;
   }
 }
 .popup .contacts-form{
