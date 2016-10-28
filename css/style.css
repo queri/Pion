@@ -2708,6 +2708,7 @@ img{
   background:#000;
   -webkit-animation: overlay 1s;
           animation: overlay 1s;
+  overflow: auto;
 }
 @-webkit-keyframes popup {
     0% { opacity: 0.5; }
@@ -2732,11 +2733,13 @@ img{
   z-index:1000;
   padding-bottom: 10px;
   text-align: center;
-  overflow: auto;
   -webkit-animation: popup 1s;
           animation: popup 1s;
 }
 
+@media (min-width: 768px) {
+
+}
 .popup--success{
   background-color: #fff;
 }
