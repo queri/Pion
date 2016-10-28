@@ -2708,8 +2708,8 @@ img{
   background:#000;
   -webkit-animation: overlay 1s;
           animation: overlay 1s;
-  overflow: auto;
 }
+
 @-webkit-keyframes popup {
     0% { opacity: 0.5; }
     100% { opacity: 1; }
@@ -2725,6 +2725,8 @@ img{
   background:#fff;
   width:300px;
   height:450px;
+  max-height: 100%;
+  width: 80%;
   top: 0;
   left: 0;
   right: 0;
@@ -2735,10 +2737,15 @@ img{
   text-align: center;
   -webkit-animation: popup 1s;
           animation: popup 1s;
+    overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
-
 @media (min-width: 768px) {
-
+  .popup {
+    overflow: hidden;
+    width:300px;
+    height:450px;
+  }
 }
 .popup--success{
   background-color: #fff;
